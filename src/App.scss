@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body{
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+}
+.todo{
+  &_board{
+    margin-top: 5vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    // height: fit-content;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+    border-radius: 5px;
+    overflow: hidden;
+    &>h1{
+      color: rgb(228,205,206);
+      font-size: 2em;
+      font-weight:lighter;
+      letter-spacing: .3em;
+    }
+  }
+
+  &_footer{
+    display: flex;
+    justify-content: center;
+    color: rgb(188,188,188);
+    font-size: .5em;
+  }
+}
+

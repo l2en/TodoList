@@ -1,0 +1,35 @@
+.todo{
+    &_header{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        &_selectAllCircle{
+          border: 1px #949494 solid;
+          border-radius: 50%;
+          width: 22px;
+          height: 20px;
+        }
+        &_unselectAll{
+          color: #c0bfbf;
+        }
+        &_selectAll{
+          color: #000000;
+        }
+        &_input{
+          width:100%;
+          height: 50px;
+          border-radius: 5px 5px 0 0;
+          font-size: 1.5em;
+          outline: none;
+          border:0;
+          &::placeholder {
+            font-size: .9em;
+            color: #eeeeee;
+            font-style: oblique;
+            font-weight: lighter;
+          }
+        }
+      }
+}

@@ -1,0 +1,30 @@
+.todo{
+    &_filter{
+        height: 50px;
+        width: 30vw;
+        background-color: #888888;
+        border-radius: 0 0 5px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: .7em;
+        color: #ffffff;
+        box-sizing: border-box;
+        padding: 20px;
+        span{
+          padding:1px 3px;
+          outline: none;
+          color: #ffffff;
+          border:0;
+          border-radius: 3px;
+          cursor: pointer;
+          background-color: transparent;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+        &_active{
+          border: 1px rgb(209, 22, 22) solid!important;
+        }
+      }
+}

@@ -1,0 +1,40 @@
+@each $member in 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 {
+  .mt_#{$member} {
+    margin-top: #{$member}px !important;
+  }
+;
+  .ml_#{$member} {
+    margin-left: #{$member}px !important;
+  }
+;
+  .mb_#{$member} {
+    margin-bottom: #{$member}px !important;
+  }
+;
+  .mr_#{$member} {
+    margin-right: #{$member}px !important;
+  }
+;
+  .m_#{$member} {
+    margin: #{$member}px !important;
+  }
+  .pt_#{$member} {
+    padding-top: #{$member}px !important;
+  }
+;
+  .pl_#{$member} {
+    padding-left: #{$member}px !important;
+  }
+;
+  .pb_#{$member} {
+    padding-bottom: #{$member}px !important;
+  }
+;
+  .pr_#{$member} {
+    padding-right: #{$member}px !important;
+  }
+;
+  .p_#{$member} {
+    padding: #{$member}px !important;
+  }
+}
