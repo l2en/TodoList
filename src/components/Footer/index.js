@@ -35,7 +35,6 @@ class FooterComponent extends Component {
       )
     let itemLeftNum = todos.filter(todo => !todo.isFinish).length
 
-
     return (
       todos.length > 0
         ? <div className='todo_filter'>
