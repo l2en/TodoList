@@ -3,7 +3,18 @@ import { connect } from 'react-redux'
 import { Filter } from '../../store/actionTypes'
 import { filterTodo, clearCompletedTodo } from '../../store/actions'
 import './index.scss'
-const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = Filter
+import * as _ from 'lodash'
+
+class ObjectToArray {
+  constructor(obj) {
+    if (!_.isObject(obj)) return;
+    let convertedArr = []
+    for (let key in obj) {
+      convertedArr.push(obj[key])
+    }
+    return convertedArr
+  }
+}
 
 class FooterComponent extends Component {
   // 筛选数据
@@ -15,15 +26,21 @@ class FooterComponent extends Component {
     this.props.clearCompletedTodo()
   }
   render() {
-    const { todos } = this.props
-    let itemLeftNum = todos.filter(todo => { return !todo.isFinish }).length
+    const { todos, filter } = this.props,
+      filterType = new ObjectToArray(Filter),
+      element = (
+        filterType.map(type =>
+          <span key={type} onClick={() => this.getFilteData(type)} className={filter === type ? 'todo_filter_active':''}>{type}</span>
+        )
+      )
+    let itemLeftNum = todos.filter(todo => !todo.isFinish).length
+
+
     return (
       todos.length > 0
         ? <div className='todo_filter'>
           <span>{itemLeftNum > 1 ? `${itemLeftNum} items left` : `${itemLeftNum} item left`}</span>
-          <span onClick={() => this.getFilteData(SHOW_ALL)}>All</span>
-          <span onClick={() => this.getFilteData(SHOW_ACTIVE)} >Active</span>
-          <span onClick={() => this.getFilteData(SHOW_COMPLETED)} >Completed</span>
+          {element}
           <span onClick={() => this.handleClear()} className={todos.some(todo => { return todo.isFinish }) ? 'vis_ab' : 'vis_hd'}>Clear completed</span>
         </div>
         : ''
@@ -31,7 +48,8 @@ class FooterComponent extends Component {
   }
 }
 const mapStateToProps = state => ({
-  todos: state.todos
+  todos: state.todos,
+  filter: state.filter
 })
 
 const Footer = connect(

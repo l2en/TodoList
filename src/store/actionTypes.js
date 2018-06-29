@@ -1,7 +1,7 @@
 export const Filter = {
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_ACTIVE: 'SHOW_ACTIVE',
-    SHOW_COMPLETED: 'SHOW_COMPLETED'
+    SHOW_ALL: 'All',
+    SHOW_ACTIVE: 'Active',
+    SHOW_COMPLETED: 'Completed'
 }
 export const SHOW_FILTEDATA = 'SHOW_FILTEDATA'
 export const ADD_TODO = 'ADD_TODO'

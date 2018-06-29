@@ -10,7 +10,6 @@ import rootReducer from './store/reducers'
 import {loadState, saveState} from './utils/dataFlow'
 import {throttle} from 'lodash'
 let preState = loadState()
-console.log('获取数据', preState)
 const store = createStore(rootReducer, preState)
 
 store.subscribe(throttle(() => {
@@ -21,7 +20,7 @@ store.subscribe(throttle(() => {
     )
   }, 1000))
 
-ReactDOM.render(
+  ReactDOM.render(
     <Provider store={store} >
         <App />
     </Provider>,
