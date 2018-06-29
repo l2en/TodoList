@@ -3,7 +3,7 @@ export const Filter = {
     SHOW_ACTIVE: 'SHOW_ACTIVE',
     SHOW_COMPLETED: 'SHOW_COMPLETED'
 }
-
+export const SHOW_FILTEDATA = 'SHOW_FILTEDATA'
 export const ADD_TODO = 'ADD_TODO'
 export const DELETE_TODO = 'DELETE_TODO'
 export const EDIT_TODO = 'EDIT_TODO'

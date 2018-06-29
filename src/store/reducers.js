@@ -6,11 +6,13 @@ import {
   TOGGLE_TODO,
   Filter,
   COMPLETED_ALL_TODO,
-  CLEAR_COMPLETED_TODO
+  CLEAR_COMPLETED_TODO,
+  SHOW_FILTEDATA
 } from './actionTypes'
-const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = Filter
+const { SHOW_ALL } = Filter
 
 // store里面包括了state,dispatch(),getState(),subscribe()....等
+// reducer里面的todos和filter就是state里面存的对象的key，key对应的数据就是我们需要的数据
 const todos = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
@@ -53,18 +55,10 @@ const todos = (state = [], action) => {
   }
 }
 
-const filter = (state = null, action) => {
+const filter = (state = SHOW_ALL, action) => {
   switch (action.type) {
-    case SHOW_ALL:
-      return state
-    case SHOW_ACTIVE:
-      return state.filter(todo => {
-          return !todo.isFinish
-      })
-    case SHOW_COMPLETED:
-      return state.filter(todo => {
-        return todo.isFinish
-    })
+    case SHOW_FILTEDATA:
+      return action.filteType
     default:
       return state
   }

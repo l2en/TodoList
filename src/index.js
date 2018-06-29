@@ -7,7 +7,19 @@ import './commonStyle/index.scss'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './store/reducers'
-const store = createStore(rootReducer)
+import {loadState, saveState} from './utils/dataFlow'
+import {throttle} from 'lodash'
+let preState = loadState()
+console.log('获取数据', preState)
+const store = createStore(rootReducer, preState)
+
+store.subscribe(throttle(() => {
+    saveState(
+      {
+        todos:store.getState().todos
+      }
+    )
+  }, 1000))
 
 ReactDOM.render(
     <Provider store={store} >
