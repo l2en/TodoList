@@ -31,7 +31,6 @@ class ItemListRender extends Component {
     )
   }
 }
-
 const mapStateToProps = state => ({
   todos: state.todos,
   filter: state.filter

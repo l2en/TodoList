@@ -7182,6 +7182,10 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
+uuid4@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/uuid4/download/uuid4-1.0.0.tgz#813aaeaf11ea2f68909c5ad57d894f83202d6720"
+
 uuid@^2.0.2:
   version "2.0.3"
   resolved "http://registry.npm.taobao.org/uuid/download/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"

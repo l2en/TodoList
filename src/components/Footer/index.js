@@ -25,6 +25,7 @@ class FooterComponent extends Component {
   handleClear = () => {
     this.props.clearCompletedTodo()
   }
+
   render() {
     const { todos, filter } = this.props,
       filterType = new ObjectToArray(Filter),
@@ -34,7 +35,6 @@ class FooterComponent extends Component {
         )
       )
     let itemLeftNum = todos.filter(todo => !todo.isFinish).length
-
     return (
       todos.length > 0
         ? <div className='todo_filter'>
