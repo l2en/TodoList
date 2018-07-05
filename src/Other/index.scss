@@ -1,0 +1,15 @@
+.test{
+    &_wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    &_item{
+        width:50%;
+        height: 100vh;
+        background: linear-gradient(to bottom,#aaaaaa 0%,#eeeeee 100%);
+        &:nth-child(2) {
+            background: linear-gradient(to bottom,#eeeeee 0%,#aaaaaa 100%);
+        }
+      }
+    }
+}

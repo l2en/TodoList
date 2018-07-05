@@ -1,0 +1,39 @@
+
+*{
+  transition: all .3s;
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav{
+    &_wrapper{
+        height:100vh;
+        width: 200px;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: rgb(87,87,97);
+        &>a{
+          width:100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+    &_bar{
+      width:90%;
+      height:40px;
+      display: flex;
+      letter-spacing: 2px;
+      justify-content:center;
+      align-items: center;
+      border:3px #eeeeee solid;
+      margin-top: 10px;
+      &:hover{
+        background-color: #eeeeee;
+        color: #000000;
+        transition: all .3s;
+      }
+  }
+}

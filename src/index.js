@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import './commonStyle/index.scss'
 
@@ -9,6 +8,7 @@ import { createStore } from 'redux'
 import rootReducer from './store/reducers'
 import {loadState, saveState} from './utils/dataFlow'
 import {throttle} from 'lodash'
+import Main from './main'
 let preState = loadState()
 const store = createStore(rootReducer, preState)
 
@@ -21,7 +21,7 @@ store.subscribe(throttle(() => {
   }, 1000))
   ReactDOM.render(
     <Provider store={store} >
-        <App />
+        <Main />
     </Provider>,
     document.getElementById('root')
 )
