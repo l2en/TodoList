@@ -1,10 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Home from './Home'
-import App from './App'
-import Nav from './Nav'
+import App from './Todo/App'
 import Other from './Other'
+import Nav from './Nav'
 import NotFound from './NotFound'
+
 const Main = () => (
 	<Router>
 		<div>

@@ -8,7 +8,7 @@ import { createStore } from 'redux'
 import rootReducer from './store/reducers'
 import {loadState, saveState} from './utils/dataFlow'
 import {throttle} from 'lodash'
-import Main from './main'
+import Main from './container/main'
 let preState = loadState()
 const store = createStore(rootReducer, preState)
 

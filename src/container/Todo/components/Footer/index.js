@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Filter } from '../../store/actionTypes'
-import { filterTodo, clearCompletedTodo } from '../../store/actions'
+import { Filter } from '../../../../store/actionTypes'
+import { filterTodo, clearCompletedTodo } from '../../../../store/actions'
 import './index.scss'
 import * as _ from 'lodash'
 

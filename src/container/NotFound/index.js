@@ -4,7 +4,9 @@ class NotFound extends Component {
   render() {
     return (
       <div className='NotFound'>
-      404
+      <div className='NotFound_circle'>
+        <p>404</p>
+      </div>
       </div>
     )
   }

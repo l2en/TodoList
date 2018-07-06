@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import TodoItem from '../TodoItem'
 import { bindActionCreators } from 'redux'
-import * as TodoActions from '../../store/actions' // 因为actions里面导出的是export 所有const，素以要全部引入且重命名为Actions
-import { Filter } from '../../store/actionTypes'
+import * as TodoActions from '../../../../store/actions' // 因为actions里面导出的是export 所有const，素以要全部引入且重命名为Actions
+import { Filter } from '../../../../store/actionTypes'
 const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = Filter
 
 class ItemListRender extends Component {

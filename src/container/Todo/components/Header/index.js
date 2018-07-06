@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as _ from 'lodash'
 import { connect } from 'react-redux'
-import { addTodo, completedAllTodo } from '../../store/actions'
+import { addTodo, completedAllTodo } from '../../../../store/actions'
 import uuid from 'uuid4'
 import './index.scss'
 
