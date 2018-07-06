@@ -1,15 +1,31 @@
-.test{
+.other{
     &_wrapper{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+        width: calc(100vw - 200px);
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        margin-left: 200px;
+    }
     &_item{
         width:50%;
         height: 100vh;
-        background: linear-gradient(to bottom,#aaaaaa 0%,#eeeeee 100%);
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:nth-child(2) {
-            background: linear-gradient(to bottom,#eeeeee 0%,#aaaaaa 100%);
+            background: #b6b6b6
+        }
+        &>ul>li{
+            font-size: 2em;
+            font-weight: bold;
+            border: 4px solid #ffffff;
+            padding: 3px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: #b6b6b6;
+            }
         }
       }
-    }
 }

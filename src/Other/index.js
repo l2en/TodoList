@@ -1,21 +1,28 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import './index.scss'
-import SecMenu from '../SecMenu'
+
 class Other extends Component {
   render() {
     let match = this.props.match
-    const Sec = ({ match }) => (
-      <h1>{match.params.sectype}</h1>
+    const Sec = ({match}) => (
+      <h1>{match.params.secMenu}</h1>
     )
     return (
       <div>
-        <div className='test_wrapper'>
-          <div className='test_item'><SecMenu /> </div>
-          <div className='test_item'>
+        <div className='other_wrapper'>
+          <div className='other_item'>
+            <ul>
+              <li><Link to={`${match.url}/secMenu1`}>secMenu1</Link></li>
+              <li><Link to={`${match.url}/secMenu2`}>secMenu2</Link></li>
+              <li><Link to={`${match.url}/secMenu3`}>secMenu3</Link></li>
+            </ul>
+          </div>
+          <div className='other_item'>
             <Switch>
-              <Route path={`${match.path}/:sectype`} component={Sec} />
-            </Switch></div>
+              <Route exact path={`${match.path}/:secMenu`} component={Sec} />
+            </Switch>
+          </div>
         </div>
       </div>
     )
