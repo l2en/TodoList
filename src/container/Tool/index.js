@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Moment from 'moment'
 import * as _ from 'lodash'
 import './index.scss'
-class Time extends Component {
+class Tool extends Component {
   state = {
     weatherInputStyle: 'time_weather',
     inputVal:''
@@ -39,4 +39,4 @@ class Time extends Component {
   }
 }
 
-export default Time
+export default Tool

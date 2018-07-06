@@ -5,7 +5,8 @@ import App from './Todo/App'
 import Other from './Other'
 import Nav from './Nav'
 import NotFound from './NotFound'
-import Time from './Time'
+import Tool from './Tool'
+import Blog from './Blog'
 const Main = () => (
 	<Router>
 		<div>
@@ -14,9 +15,10 @@ const Main = () => (
 				<Route exact path='/' component={Home} />
 				<Route path='/app' component={App} />
 				<Route path='/other' component={Other} />
-				<Route path='/time' component={Time} />
+				<Route path='/tools' component={Tool} />
+				<Route path='/blog' component={Blog}/>
 				<Route path='/NotFound' component={NotFound} />
-				<Redirect to='/NotFound' />
+				<Redirect to='/' />
 			</Switch>
 		</div>
 	</Router>
