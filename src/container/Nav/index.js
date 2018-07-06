@@ -14,6 +14,7 @@ class Nav extends Component {
           <NavLink exact activeStyle={activeStyle} to='/'>Home</NavLink>
           <NavLink activeStyle={activeStyle} to='/app'>Todo</NavLink>
           <NavLink activeStyle={activeStyle} to='/other'>Other</NavLink>
+          <NavLink activeStyle={activeStyle} to='/time'>Time</NavLink>
         </div>
       </div>
     )

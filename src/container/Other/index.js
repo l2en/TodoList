@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, NavLink } from 'react-router-dom'
+import { Route, Switch, NavLink, Redirect } from 'react-router-dom'
 import './index.scss'
 
 class Other extends Component {
@@ -10,7 +10,14 @@ class Other extends Component {
       backgroundColor: '#ffffff'
     },
     Sec = ({match}) => (
-      <h1>{match.params.secMenu}</h1>
+      <div>
+          <h1>{match.params.secMenu}</h1>
+          match.url:{match.url}<br/>
+          match.path:{match.path}
+      </div>
+    ),
+    SecDefault = () => (
+      <h1>暂时没有东西</h1>
     )
     return (
       <div>
@@ -24,7 +31,9 @@ class Other extends Component {
           </div>
           <div className='other_item'>
             <Switch>
+              <Route exact path={`${match.path}`} component={SecDefault} />
               <Route exact path={`${match.path}/:secMenu`} component={Sec} />
+              <Redirect to={`${match.path}`}/>
             </Switch>
           </div>
         </div>

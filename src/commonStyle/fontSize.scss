@@ -1,0 +1,5 @@
+@for $member from 10 through 50 {
+  .fs_#{$member} {
+    font-size: #{$member}px !important;
+  }
+}
