@@ -7,8 +7,11 @@
 
 ### 安装 
 >clone: **git clone https://github.com/l2en/todo-react-redux**
+
 npm i || yarn
+
 npm start || yarn start
+
 预览**http://localhost:3000**
 
 ### Demo
